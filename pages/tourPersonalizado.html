@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link tipografia-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <!--Link Sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js"></script>
+    <!--Link de mi css-->
+    <link rel="stylesheet" href="../css/styles2.css">
+    <title>Armar Tour - JaquelinaViajes</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="contenedorArmarTour">
+            <h2>Arma tu tour persolizado!</h2>
+            <form id="formTour" action="">
+                <div class="rowForm" id="divDate">
+                    <h3>Fecha de salida</h3>
+                    <input id="date" type="date">
+                </div>
+                <div class="rowForm">
+                    <h3>Cant. de personas: </h3>
+                    <select name="" id="selectPersonas">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="rowForm" id="divAG">
+                    <h3>Area Geografica:</h3>
+                    <select name="" id="areaGeografica">
+                        <option value="seleccionar">seleccionar...</option>
+                    </select>
+                </div>
+                <div class="rowForm" id="divPaises">
+                    <h3>Paises</h3>
+                    <div id="paises">
+
+                    </div>
+                </div>
+                <div class="rowForm">
+                    <h3>Dias en cada pais:</h3>
+                    <select name="" id="selectDias">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                </div>
+                <div class="rowForm">
+                    <h3>Excursiones (por pais):</h3>
+                    <select name="" id="selectExc">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+                <div id="divEmail" class="rowForm">
+                    <h3>Email:</h3> <input id="inputEmail" type="email">
+                </div>
+                <div class="rowForm comentarios">
+                    <h4>Si necesitas algo fuera de las opciones dejanos tu comentario:</h4><input id="comentario" type="text">
+                </div>
+                <div class="rowform">
+                    <input type="reset" value="Resetear">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    
+    <!--Sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--Armar Tour js-->
+    <script src="../js/armarTour.js"></script>
+
+</body>
+
+</html>

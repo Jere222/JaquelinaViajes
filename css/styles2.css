@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #060425;
+    color: rgb(15, 12, 36);
+    font-family: 'Montserrat', sans-serif !important;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 10rem 0;
+}
+
+.contenedorArmarTour {
+    background-color: whitesmoke;
+    box-shadow: 2px 1.5px 0.4rem #b1abab;
+    width: 28rem;
+    padding: 30px 1rem ;
+}
+
+.contenedorArmarTour form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.contenedorArmarTour h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contenedorArmarTour form .rowForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    justify-content: center;
+}
+
+.contenedorArmarTour form .rowForm #paises{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contenedorArmarTour form .rowForm h5 {
+    color: red;
+}
+
+.contenedorArmarTour form .comentarios h4 {
+    text-align: center;
+}
+
+.contenedorArmarTour form .comentarios input {
+    height: 3rem;
+    width: 22rem;
+    margin-left: 2.5rem;
+}
+
+#divAlertaArmado h4{
+    margin: 10px 0;
+}
+
+#divAlertaArmado div {
+    display: flex;
+    column-gap: 0.5rem;
+    justify-content: center;
+}
+
+#divAlertaArmado p {
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    body{
+        padding: 5rem 0;
+        background-color: whitesmoke;
+    }
+    .contenedorArmarTour {
+        min-height: 100vh;
+        border-radius: 0;
+        box-shadow: 0 0 0;
+    }
+    .contenedorArmarTour form .comentarios h4 {
+        width: 80%;
+    }
+    .contenedorArmarTour form .comentarios input {
+        width: 15rem;
+    }
+    
+}
