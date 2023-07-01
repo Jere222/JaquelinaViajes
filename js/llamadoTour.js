@@ -6,7 +6,7 @@ if (document.querySelector('.carousel')) {
             showCloseButton: 'true',
             confirmButtonText: '<a class="btnConfirm" href="pages/tourPersonalizado.html" target="_blank">Vamos!</a>'
         })
-    }, 30000);
+    }, 10000);
 } else {
     setTimeout(() => {
         swal.fire({
@@ -15,5 +15,5 @@ if (document.querySelector('.carousel')) {
             showCloseButton: 'true',
             confirmButtonText: '<a class="btnConfirm" href="../pages/tourPersonalizado.html" target="_blank">Vamos!</a>'
         })
-    }, 30000);
+    }, 10000);
 }

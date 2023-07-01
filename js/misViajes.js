@@ -11,18 +11,31 @@ function noHayViajes() {
 
 let total = 0;
 
-function precioEnDolares(precioDolar){
+function mostrarPrecio() {
     let btnComprar = document.querySelector(".precioBoton .boton");
-        btnComprar.addEventListener('click', function () {
-    let total = btnComprar.parentNode.querySelector(".precio").textContent;
-    total = parseInt(total.slice(1, total.lenght));
-    let totalDolares = total/precioDolar;
-    Swal.fire({
-        title: 'Haz realizado tu compra',
-        text: 'El importe es de $' + total + ' o USD$'+ totalDolares,
-        icon: 'success',
-    })});
-} 
+    btnComprar.addEventListener('click', function () {
+        let total = btnComprar.parentNode.querySelector(".precio").textContent;
+        Swal.fire({
+            title: 'Haz realizado tu compra',
+            text: 'El importe es de ' + total,
+            icon: 'success',
+        })
+    })
+}
+
+function precioEnDolares(precioDolar) {
+    let btnComprar = document.querySelector(".precioBoton .boton");
+    btnComprar.addEventListener('click', function () {
+        let total = btnComprar.parentNode.querySelector(".precio").textContent;
+        total = parseInt(total.slice(1, total.lenght));
+        let totalDolares = total / precioDolar;
+        Swal.fire({
+            title: 'Haz realizado tu compra',
+            text: 'El importe es de $' + total + ' o  USD$' + totalDolares,
+            icon: 'success',
+        })
+    });
+}
 
 function mostrarMisViajes() {
     let arregloProductosCarrito = localStorage.getItem('objetosCarrito');
@@ -42,12 +55,13 @@ function mostrarMisViajes() {
         totalBoton.className = 'precioBoton';
         totalBoton.innerHTML = '<p class="precio">$' + total + '</p> <p class="boton">Comprar</p>'
         document.querySelector('.contenedorMisViajes').append(totalBoton);
+
         //BOTON COMPRAR
-        
-            fetch('https://api.bluelytics.com.ar/v2/latest')
-                .then((resp)=> resp.json())
-                .then((data)=>precioEnDolares(data.blue.value_buy))
-        
+        fetch('https://api.bluelytics.com.ar/v2/latest')
+            .then((resp) => resp.json())
+            .then((data) => precioEnDolares(data.blue.value_buy))
+            .catch(mostrarPrecio())
+
     } else {
         noHayViajes();
     }
